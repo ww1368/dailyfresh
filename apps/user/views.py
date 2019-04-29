@@ -88,7 +88,6 @@ class LoginView(View):
         pass
         username = request.POST.get('username')
         password = request.POST.get('pwd')
-
         if not all([username, password]):
             return render(request, 'login.html', {'errmsg': '数据不完整'})
         user = authenticate(username='www1368', password='12345678')
